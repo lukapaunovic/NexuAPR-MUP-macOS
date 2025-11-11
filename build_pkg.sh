@@ -6,7 +6,7 @@ pkgbuild \
   --root "./nexu_pkg_build/root" \
   --identifier com.nexu.apr.mup \
   --version 1.1 \
-  --install-location "/Applications" \
+  --install-location "$HOME/Desktop" \
   --scripts "./nexu_pkg_build/scripts" \
   "$HOME/Desktop/NexuAPR_MUP.pkg"
 
