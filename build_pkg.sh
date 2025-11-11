@@ -6,7 +6,7 @@ pkgbuild \
   --root "$HOME/nexu_pkg_build/root/Applications/NexuAPR.app" \
   --identifier com.nexu.apr.mup \
   --version 1.2 \
-  --install-location "/Applications/NexuAPR.app" \
+  --install-location "/Users/Shared/Applications" \
   --scripts "$HOME/nexu_pkg_build/scripts" \
   "$HOME/Desktop/NexuAPR_MUP.pkg"
 
