@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>lu.nowina.nexu</string>
+
+    <key>CFBundleName</key>
+    <string>NexuAPR</string>
+
+    <key>CFBundleVersion</key>
+    <string>2.04</string>
+
+    <key>CFBundleExecutable</key>
+    <string>NexuAPR</string>
+
+    <key>JVMOptions</key>
+    <array>
+        <string>-Djava.security.properties=$HOME/Applications/NexuAPR_patched.app/Contents/Resources/pkcs11/java.security.extra</string>
+    </array>
+
+</dict>
+</plist>

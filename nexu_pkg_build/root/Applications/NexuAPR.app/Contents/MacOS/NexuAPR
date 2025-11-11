@@ -1,0 +1,22 @@
+#!/bin/bash
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+cd "$parent_path"
+
+# Put gde će korisnik imati java.security.extra
+JAVA_SECURITY="$HOME/Library/Application Support/NexuAPR/java.security.extra"
+
+# Ako ne postoji, kopiraj ga iz aplikacije
+if [ ! -f "$JAVA_SECURITY" ]; then
+  mkdir -p "$HOME/Library/Application Support/NexuAPR"
+  cp "../Resources/pkcs11/java.security.extra" "$JAVA_SECURITY"
+fi
+
+# Pokreni JAR sa PKCS11 konfiguracijom
+exec java \
+  -Xdock:icon=../Resources/nexu.icns \
+  -Xmx1024m \
+  -Xms256m \
+  -Dfile.encoding=UTF-8 \
+  -Djava.security.properties="$JAVA_SECURITY" \
+  -jar ../Resources/nexu-apr-kdp.jar
+

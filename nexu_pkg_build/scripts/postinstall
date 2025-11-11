@@ -1,0 +1,49 @@
+#!/bin/bash
+
+APP="/Applications/NexuAPR.app"
+
+# detektuj pravog korisnika
+REAL_USER=$(stat -f%Su /dev/console)
+USER_HOME=$(dscl . -read /Users/$REAL_USER NFSHomeDirectory | awk '{print $2}')
+NEXU_DIR="$USER_HOME/.NexUApr"
+
+/usr/bin/xattr -cr "$APP" 2>/dev/null
+
+# obriši stari store.xml
+rm -f "$NEXU_DIR/store.xml" 2>/dev/null
+
+mkdir -p "$NEXU_DIR"
+
+# detektuj arhitekturu
+ARCH=$(uname -m)
+if [ "$ARCH" = "arm64" ]; then
+    LIB_NAME="libsrb-id-pkcs11.arm.0.2.0.dylib"
+else
+    LIB_NAME="libsrb-id-pkcs11.intel.0.2.0.dylib"
+fi
+
+# kreiraj user settings
+cat > "$NEXU_DIR/user_settings_db.xml" << EOX
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user-settings>
+    <token-list>
+        <token>
+            <id>MUP</id>
+            <custom-pkcs-list>
+                <pkcs11>
+                    <alias>MUP</alias>
+                    <lib>/Applications/NexuAPR.app/Contents/Resources/pkcs11/$LIB_NAME</lib>
+                    <slot>0</slot>
+                </pkcs11>
+            </custom-pkcs-list>
+        </token>
+    </token-list>
+</user-settings>
+EOX
+
+/usr/sbin/chown -R "$REAL_USER":staff "$NEXU_DIR"
+chmod 700 "$NEXU_DIR"
+chmod 600 "$NEXU_DIR/user_settings_db.xml"
+
+exit 0
+
