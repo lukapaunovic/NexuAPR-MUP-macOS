@@ -41,7 +41,8 @@ Nakon što odobrite sertifikat, aplikacija radi normalno i potpisivanje funkcion
 
 ## Podržane verzije macOS-a
 
-- Testirano na Sequoia 15.6.1
+- Testirano na Sequoia 15.6.1 ARM (M4)
+Ako imate bilo kakve probleme javite se, lako ćemo ih rešiti a ujedno omogućiti da aplikacija radi i drugima bez muke.
 
 ---
 
