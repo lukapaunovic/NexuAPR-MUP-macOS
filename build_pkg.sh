@@ -3,7 +3,7 @@
 echo "Kreiram PKG koristeći postojeće NexuAPR.app i scripts..."
 
 pkgbuild \
-  --root "$HOME/nexu_pkg_build/root" \
+  --root "$HOME/nexu_pkg_build/root/Applications" \
   --identifier com.nexu.apr.mup \
   --version 1.2 \
   --install-location "/Applications" \
