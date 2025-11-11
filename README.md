@@ -15,7 +15,7 @@ Izvorni repozitorijum: https://github.com/ubavic/srb-id-pkcs11
 
 ---
 
-Prepravljena verzija nije podržana od strane APR-a. Napravljena je isključivo u najboljoj nameri, sa željom da se i korisnicima macOS-a omogući potpisivanje. Izmene menjaju isključivo deo aplikacije koji je okrenut ka kartici, bez izmena drugog koda. Za pristup kartici izmenjena aplikacija koristi isključivo postojeće PKCS#11 biblioteke i ne bi trebalo da dovede do oštećenja ili neočekivanog blokiranja kartice (kartica će biti blokirana u slučaju da korisnik više puta unese pogrešan PIN kod, što je podrazumevano ponašanje). Ipak napisano ne predstavlja garanciju i ovu nepodržanu i prepravljenu verziju koristite isključivo na svoju odgovornost.
+Prepravljena verzija nije podržana od strane APR-a. Napravljena je isključivo u najboljoj nameri, sa željom da se i korisnicima macOS-a omogući potpisivanje. Izmene menjaju isključivo deo aplikacije koji je okrenut ka kartici, bez izmena drugog koda. Za pristup kartici izmenjena aplikacija koristi isključivo **srb-id-pkcs11** biblioteke i ne bi trebalo da dovede do oštećenja ili neočekivanog blokiranja kartice (kartica će biti blokirana u slučaju da korisnik više puta unese pogrešan PIN kod, što je podrazumevano ponašanje). Ipak napisano ne predstavlja garanciju i ovu nepodržanu i prepravljenu verziju koristite isključivo na svoju odgovornost.
 
 ---
 
