@@ -10,4 +10,4 @@ pkgbuild \
   --scripts "$HOME/nexu_pkg_build/scripts" \
   "$HOME/Desktop/NexuAPR_MUP.pkg"
 
-echo "Gotovo! PKG je na Desktop-u."
+echo "Gotovo! PKG je u Applications"
