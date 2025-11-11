@@ -8,6 +8,13 @@ Aplikacija je modifikovana kako bi ispravno radila na novijim verzijama macOS-a 
 
 ---
 
+Aplikacija je bazirana na biblioteci **srb-id-pkcs11** za rad sa srpskim ličnim kartama (eID), koju je razvio @ubavic.
+Veliko hvala autoru na otvorenom kodu, uputstvima i pomoći zajednici.
+
+Izvorni repozitorijum: https://github.com/ubavic/srb-id-pkcs11
+
+---
+
 ## Šta sadrži?
 
 - prepakovanu `NexuAPR.app` aplikaciju
