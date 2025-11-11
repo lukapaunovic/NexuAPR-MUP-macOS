@@ -13,6 +13,9 @@
 
     <key>CFBundleExecutable</key>
     <string>NexuAPR</string>
-
+    <key>JVMOptions</key>
+    <array>
+        <string>-Djava.security.properties=$HOME/Applications/NexuAPR_patched.app/Contents/Resources/pkcs11/java.security.extra</string>
+    </array>
 </dict>
 </plist>
