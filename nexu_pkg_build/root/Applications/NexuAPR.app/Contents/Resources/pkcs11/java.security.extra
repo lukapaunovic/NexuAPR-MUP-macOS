@@ -1,1 +1,1 @@
-security.provider.12=sun.security.pkcs11.SunPKCS11 /Applications/NexuAPR_patched.app/Contents/Resources/pkcs11/pkcs11-srb.cfg
+security.provider.12=sun.security.pkcs11.SunPKCS11 /Applications/NexuAPR.app/Contents/Resources/pkcs11/pkcs11-srb.cfg
