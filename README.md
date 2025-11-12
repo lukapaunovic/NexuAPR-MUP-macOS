@@ -13,6 +13,10 @@ Ovo nije zvanična APR verzija. Aplikacija je modifikovana samo u delu komunikac
 
 --------------------------------------------------------------------------------
 
+## Download
+
+[📥 Preuzmi NexuAPR_MUP.dmg](https://github.com/lukapaunovic/NexuAPR-MUP-macOS/releases/download/v1.4/NexuAPR_MUP.dmg)
+
 ## Šta sadrži
 
 - NexuAPR.app
