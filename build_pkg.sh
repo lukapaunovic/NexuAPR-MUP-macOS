@@ -10,7 +10,7 @@ pkgbuild \
   --root "$ROOT" \
   --identifier com.nexu.apr.mup \
   --version 1.4 \
-  --install-location "/Applications" \
+  --install-location "/" \
   --scripts "$SCRIPTS" \
   "$PKG"
 
