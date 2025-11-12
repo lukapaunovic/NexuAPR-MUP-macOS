@@ -16,7 +16,7 @@ NEXU_DIR="$USER_HOME/.NexUApr"
 mkdir -p "$NEXU_DIR"
 
 ARCH=$(uname -m)
-if [ "$(sysctl -n hw.optional.arm64 2>/dev/null)" = "1" ]; then
+if [ "$(sysctl -n hw.optional.arm64 2>/dev/null)" = "1" ]; then # Rozeta i ko je izmisli
     LIB_NAME="libsrb-id-pkcs11.arm.0.2.0.dylib"
 else
     LIB_NAME="libsrb-id-pkcs11.x64.0.2.0.dylib"
