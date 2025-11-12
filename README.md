@@ -50,15 +50,7 @@ Browser će prikazati upozorenje, potrebno je potvrditi nastavak (Advanced → C
      - System Settings → Privacy & Security → Open Anyway
      - ili desni klik / Control na aplikaciju → Open
 
---------------------------------------------------------------------------------
-
-## Pokretanje
-
-Iz macOS:
-
-Applications → NexuAPR
-
-ili iz terminala:
+Ili preko Terminala:
 
 ```
 cd ~/Downloads
@@ -70,6 +62,13 @@ codesign --force --deep --sign - /Applications/NexuAPR.app
 hdiutil detach /Volumes/NexuAPR
 open /Applications/NexuAPR.app
 ```
+--------------------------------------------------------------------------------
+
+## Pokretanje
+
+Iz macOS:
+
+Applications → NexuAPR
 
 --------------------------------------------------------------------------------
 
