@@ -50,7 +50,7 @@ Browser će prikazati upozorenje, potrebno je potvrditi nastavak (Advanced → C
      - System Settings → Privacy & Security → Open Anyway
      - ili desni klik / Control na aplikaciju → Open
 
-Ili preko Terminala:
+Ili preko Terminala (Lokalno potpisuje aplikaciju, za rad bez upozorenja i smaranja):
 
 ```
 cd ~/Downloads
