@@ -33,4 +33,5 @@ cat > "$NEXU_DIR/user_settings_db.xml" <<EOF
 </user-settings>
 EOF
 
-open "$APP_DIR/MacOS/NexuAPR"
+"$APP_DIR/MacOS/NexuAPR" > /dev/null 2>&1 &
+exit 0
