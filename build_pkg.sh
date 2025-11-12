@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT="$PWD/nexu_pkg_build/root/NexuAPR.app"
+ROOT="$PWD/nexu_pkg_build/root"
 SCRIPTS="$PWD/nexu_pkg_build/scripts"
 PKG="$PWD/NexuAPR_MUP.pkg"
 
