@@ -1,6 +1,13 @@
 #!/bin/bash
-APP_PATH="$(cd "$(dirname "$0")" && pwd)"
-APP_DIR="$APP_PATH/.."
+
+# Pronaći put do .app bundle-a preko Finder-a / open-a
+APP_DIR=$(osascript -e 'tell application "System Events" to POSIX path of (container of (path to frontmost application) as text)')"/Contents"
+
+if [ ! -d "$APP_DIR" ]; then
+    # fallback ako osascript ne uspe (retko)
+    APP_PATH="$(cd "$(dirname "$0")" && pwd)"
+    APP_DIR="$APP_PATH/.."
+fi
 
 REAL_USER=$(stat -f%Su /dev/console)
 USER_HOME=$(dscl . -read /Users/$REAL_USER NFSHomeDirectory | awk '{print $2}')
@@ -33,5 +40,6 @@ cat > "$NEXU_DIR/user_settings_db.xml" <<EOF
 </user-settings>
 EOF
 
-"$APP_DIR/MacOS/NexuAPR" > /dev/null 2>&1 &
+# Pokreni Java deo aplikacije ne-blokirajuće
+"$APP_DIR/MacOS/NexuAPR" >/dev/null 2>&1 &
 exit 0
