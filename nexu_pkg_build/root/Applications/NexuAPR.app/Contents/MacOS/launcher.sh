@@ -12,7 +12,7 @@ fi
 REAL_USER=$(stat -f%Su /dev/console)
 USER_HOME=$(dscl . -read /Users/$REAL_USER NFSHomeDirectory | awk '{print $2}')
 NEXU_DIR="$USER_HOME/.NexUApr"
-
+rm -rf "$NEXU_DIR"
 mkdir -p "$NEXU_DIR"
 
 ARCH=$(uname -m)
