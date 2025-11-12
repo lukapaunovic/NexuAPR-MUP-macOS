@@ -1,13 +1,19 @@
 #!/bin/bash
 
-echo "Kreiram PKG koristeći postojeće NexuAPR.app i scripts..."
+ROOT="$PWD/nexu_pkg_build/root"
+SCRIPTS="$PWD/nexu_pkg_build/scripts"
+PKG="$HOME/Desktop/NexuAPR_MUP.pkg"
+
+echo "[*] Generišem PKG..."
 
 pkgbuild \
-  --root "$PWD/nexu_pkg_build/root" \
+  --root "$ROOT" \
   --identifier com.nexu.apr.mup \
-  --version 1.2 \
-  --install-location "/" \
-  --scripts "$PWD/nexu_pkg_build/scripts" \
-  "$HOME/Desktop/NexuAPR_MUP.pkg"
+  --version 1.4 \
+  --install-location "/Applications" \
+  --scripts "$SCRIPTS" \
+  "$PKG"
 
-echo "Gotovo! PKG je na Desktop-u"
+echo "PKG generisan: $PKG"
+echo "Instalacija:"
+echo "sudo installer -pkg \"$PKG\" -target /"
