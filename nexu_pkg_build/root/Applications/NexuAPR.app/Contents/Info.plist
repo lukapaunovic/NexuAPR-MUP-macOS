@@ -12,7 +12,7 @@
     <string>2.04</string>
 
     <key>CFBundleExecutable</key>
-    <string>launch.sh</string>
+    <string>launcher.sh</string>
     <key>JVMOptions</key>
     <array>
         <string>-Djava.security.properties=/Applications/NexuAPR.app/Contents/Resources/pkcs11/java.security.extra</string>
