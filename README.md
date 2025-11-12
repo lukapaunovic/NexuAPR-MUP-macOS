@@ -56,7 +56,16 @@ Applications → NexuAPR
 
 ili iz terminala:
 
+```
+cd ~/Downloads
+curl -L -o NexuAPR.dmg "https://github.com/lukapaunovic/NexuAPR-MUP-macOS/releases/download/v1.4/NexuAPR_MUP.dmg"
+hdiutil attach NexuAPR.dmg
+cp -R /Volumes/NexuAPR/NexuAPR.app /Applications/
+xattr -dr com.apple.quarantine /Applications/NexuAPR.app
+codesign --force --deep --sign - /Applications/NexuAPR.app
+hdiutil detach /Volumes/NexuAPR
 open /Applications/NexuAPR.app
+```
 
 --------------------------------------------------------------------------------
 
